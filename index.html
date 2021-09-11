@@ -1,51 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./style.js" />
-    <title>Work Day Scheduler</title>
-  </head>
 
-  <div>
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
-    </header>
-    <div class="container">
-        <div id="nineOClock" class="row"></div>
-          <div class="col-1 hour my-auto">9:00</div>
-          <div class="col"></div>
-          <button class="col-1 saveBtn d-flex justify-content-center">
-          </button>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Work Day Scheduler</title>
+</head>
 
-        <div id="tenOClock" class="row"></div>
-          <div class="col-1 hour my-auto">10:00</div>
-          <div class="col"></div>
-          <button class="col-1 saveBtn d-flex justify-content-center">
-          </button>
-        </div>
+<div>
+  <header class="jumbotron">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p id="currentDay" class="lead"></p>
+  </header>
+  <div class="container">
+    <div id="nineHundred" class="row">
+      <div class="col hour">9AM</div>
+      <input class="col-9" id="message9" type="text" name="900"></input>
+      <button class="col saveBtn" id="nine"></button>
     </div>
-    
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="./style.js"></script>
+    <div id="tenHundred" class="row">
+      <div class="col hour">10AM</div>
+      <div class="col-9" id="message10"></div>
+      <button class="col saveBtn"></button>
+    </div>
+    <div id="elevenHundred" class="row">
+      <div class="col hour">11AM</div>
+      <div class="col-9" id="message11"></div>
+      <button class="col saveBtn"></button>
+    </div>
+    <div id="twelveHundred" class="row">
+      <div class="col hour">12PM</div>
+      <div class="col-9" id="message12"></div>
+      <button class="col saveBtn"></button>
+    </div>
+    <div id="thirteenHundred" class="row">
+      <div class="col hour">1PM</div>
+      <div class="col-9" id="message13"></div>
+      <button class="col saveBtn"></button>
+    </div>
+    <div id="fourteenHundred" class="row">
+      <div class="col hour">2PM</div>
+      <div class="col-9" id="message14"></div>
+      <button class="col saveBtn"></button>
+    </div>
+    <div id="fifteenHundred" class="row">
+      <div class="col hour">3PM</div>
+      <div class="col-9" id="message15"></div>
+      <button class="col saveBtn"></button>
+    </div>
+    <div id="sixteenHundred" class="row">
+      <div class="col hour">4PM</div>
+      <div class="col-9" id="message16"></div>
+      <button class="col saveBtn"></button>
+    </div>
+    <div id="seventeenHundred" class="row">
+      <div class="col hour">5PM</div>
+      <div class="col-9" id="message17"></div>
+      <button class="col saveBtn"></button>
+    </div>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./style.js"></script>
   </body>
+
 </html>
