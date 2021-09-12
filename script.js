@@ -58,39 +58,39 @@ function timeStatus() {
 
 function recordMessage9() {
     message9 = message9El.value;
-    localStorage.setItem("saved-message9", JSON.stringify(message9));
+    localStorage.setItem("saved-message9", message9);
 }
 function recordMessage10() {
     message10 = message10El.value;
-    localStorage.setItem("saved-message10", JSON.stringify(message10));
+    localStorage.setItem("saved-message10",message10);
 }
 function recordMessage11() {
     message11 = message11El.value;
-    localStorage.setItem("saved-message11", JSON.stringify(message11));
+    localStorage.setItem("saved-message11", message11);
 }
 function recordMessage12() {
     message12 = message12El.value;
-    localStorage.setItem("saved-message12", JSON.stringify(message12));
+    localStorage.setItem("saved-message12", message12);
 }
 function recordMessage13() {
     message13 = message13El.value;
-    localStorage.setItem("saved-message13", JSON.stringify(message13));
+    localStorage.setItem("saved-message13", message13);
 }
 function recordMessage14() {
     message14 = message14El.value;
-    localStorage.setItem("saved-message14", JSON.stringify(message14));
+    localStorage.setItem("saved-message14", message14);
 }
 function recordMessage15() {
     message15 = message15El.value;
-    localStorage.setItem("saved-message15", JSON.stringify(message15));
+    localStorage.setItem("saved-message15", message15);
 }
 function recordMessage16() {
     message16 = message16El.value;
-    localStorage.setItem("saved-message16", JSON.stringify(message16));
+    localStorage.setItem("saved-message16", message16);
 }
 function recordMessage17() {
     message17 = message17El.value;
-    localStorage.setItem("saved-message17", JSON.stringify(message17));
+    localStorage.setItem("saved-message17", message17);
 }
 
 function loadMessages() {
