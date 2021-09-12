@@ -16,3 +16,5 @@ Resources:
 "https://use.fontawesome.com/releases/v5.8.1/css/all.css"
 "https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
 
+![Getting Started](./images/onedayschedule.png)
+
