@@ -12,7 +12,6 @@ var currentDay = document.querySelector("#currentDay"),
     message12,
     twelveBtn = document.querySelector("#twelve"),
     message13El = document.querySelector("#message13"),
-
     message13,
     thirteenBtn = document.querySelector("#thirteen"),
     message14El = document.querySelector("#message14"),
@@ -24,25 +23,22 @@ var currentDay = document.querySelector("#currentDay"),
     message16El = document.querySelector("#message16"),
     message16,
     sixteenBtn = document.querySelector("#sixteen"),
-
     message17El = document.querySelector("#message17"),
     message17,
     seventeenBtn = document.querySelector("#seventeen"),
     localMessage,
     elementMessage,
-    messageArray = [];
 currentHour = moment().hour();
 
-$(currentDay).text(moment().format('LLLL'));
+$(currentDay).text(moment().format("dddd, MMMM D"));
 
 //make this run continously in background to check if past, present or future
 setInterval(function () {
     timeStatus();
-}, 356 * 24 * 60 * 60)
+}, 8,640,000)
 
 function timeStatus() {
     var taskArea;
-
     for (let i = 9; i < 18; i++) {
         //assign ID to taskArea
         taskArea = ("#message" + i);
@@ -106,10 +102,7 @@ function loadMessages() {
         var displayMessage;
         if (localStorage.getItem(localMessage) === null) {
             //if localStorage is empty do nothing
-        
         } else {
-            //if localStorage is filled put it out on correct time message
-
             displayMessage = (localStorage.getItem(localMessage));
             elMessage.value = displayMessage;
         }
