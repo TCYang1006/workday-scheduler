@@ -12,6 +12,7 @@ var currentDay = document.querySelector("#currentDay"),
     message12,
     twelveBtn = document.querySelector("#twelve"),
     message13El = document.querySelector("#message13"),
+
     message13,
     thirteenBtn = document.querySelector("#thirteen"),
     message14El = document.querySelector("#message14"),
@@ -29,7 +30,8 @@ var currentDay = document.querySelector("#currentDay"),
     seventeenBtn = document.querySelector("#seventeen"),
     localMessage,
     elementMessage,
-    currentHour = moment().hour();
+    messageArray = [];
+currentHour = moment().hour();
 
 $(currentDay).text(moment().format('LLLL'));
 
@@ -60,60 +62,58 @@ function timeStatus() {
 
 function recordMessage9() {
     message9 = message9El.value;
-        localStorage.setItem("saved-message9", JSON.stringify(message9));
+    localStorage.setItem("saved-message9", JSON.stringify(message9));
 }
-function recordMessage10() {  
+function recordMessage10() {
     message10 = message10El.value;
-        localStorage.setItem("saved-message10", JSON.stringify(message10));  
+    localStorage.setItem("saved-message10", JSON.stringify(message10));
 }
-function recordMessage11() {  
+function recordMessage11() {
     message11 = message11El.value;
-        localStorage.setItem("saved-message11", JSON.stringify(message11));
+    localStorage.setItem("saved-message11", JSON.stringify(message11));
 }
-function recordMessage12() {            
+function recordMessage12() {
     message12 = message12El.value;
-        localStorage.setItem("saved-message12", JSON.stringify(message12));
+    localStorage.setItem("saved-message12", JSON.stringify(message12));
 }
-function recordMessage13() {    
+function recordMessage13() {
     message13 = message13El.value;
-        localStorage.setItem("saved-message13", JSON.stringify(message13));    
+    localStorage.setItem("saved-message13", JSON.stringify(message13));
 }
-function recordMessage14() {                
+function recordMessage14() {
     message14 = message14El.value;
-        localStorage.setItem("saved-message14", JSON.stringify(message14));    
+    localStorage.setItem("saved-message14", JSON.stringify(message14));
 }
-function recordMessage15() {        
+function recordMessage15() {
     message15 = message15El.value;
-        localStorage.setItem("saved-message15", JSON.stringify(message15));    
+    localStorage.setItem("saved-message15", JSON.stringify(message15));
 }
-function recordMessage16() {        
+function recordMessage16() {
     message16 = message16El.value;
-        localStorage.setItem("saved-message16", JSON.stringify(message16));    
+    localStorage.setItem("saved-message16", JSON.stringify(message16));
 }
-function recordMessage17() {        
+function recordMessage17() {
     message17 = message17El.value;
-        localStorage.setItem("saved-message17", JSON.stringify(message17));    
+    localStorage.setItem("saved-message17", JSON.stringify(message17));
 }
 
-function loadMessages(){
+function loadMessages() {
 
+    for (let index = 9; index < 18; index++) {
+        localMessage = "saved-message"+index;
+        var elMessage = ("message"+index+"El");
+        elMessage = document.querySelector('#message'+index);
+        var displayMessage;
+        if (localStorage.getItem(localMessage) === null) {
+            //if localStorage is empty do nothing
+        
+        } else {
+            //if localStorage is filled put it out on correct time message
 
-for (let index = 9; index < 18; index++) {
-    localMessage = "saved-message"+index;elementMessage = ("message"+index+"El.value");
-    if (localStorage.getItem(localMessage)===null){
-        //if localStorage is empty do nothing
-        console.log("nothing");
-    }else{
-        //if localStorage is filled put it out on correct time message
-
-        elementMessage = (JSON.parse(localStorage.getItem(localMessage)));
-
-        // console.log(elementMessage);
-        // console.log(localMessage);
-        // elementMessage.value = (JSON.parse(localStorage.getItem(localMessage)));
-        // console.log(JSON.parse(localStorage.getItem(localMessage)));
-    }   
-}
+            displayMessage = (localStorage.getItem(localMessage));
+            elMessage.value = displayMessage;
+        }
+    }
 }
 window.onload = loadMessages();
 nineBtn.addEventListener('click', recordMessage9);
